@@ -40,72 +40,117 @@
   </head>
 
   <body class="index-page">
-   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/scrlogo.jpeg" alt="SCR Logo" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
-        <h1 class="sitename" id="sitename-logo">SCR COMUNITY FAMILY</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="d-xl-none"><a href="services.html" class="btn-getstarted-mobile">Get Started</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="dropdown" style="margin-right: 15px;">
-        <a href="#" class="dropdown-toggle" style="text-decoration: none; color: inherit;">
-          <span>🌐</span> <i class="bi bi-chevron-down"></i>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <img
+            src="assets/img/scrlogo.jpeg"
+            alt="SCR Logo"
+            style="
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-right: 10px;
+            "
+          />
+          <h1 class="sitename" id="sitename-logo">SCR COMUNITY FAMILY</h1>
         </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇺🇸 English</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">🇪🇸 Español</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">🇲🇦 العربية</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ur')">🇵🇰 اردو</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ms')">🇲🇾 Bahasa Malaysia</a></li>
-        </ul>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="d-xl-none">
+              <a href="services.html" class="btn-getstarted-mobile"
+                >Get Started</a
+              >
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="dropdown" style="margin-right: 15px">
+          <a
+            href="#"
+            class="dropdown-toggle"
+            style="text-decoration: none; color: inherit"
+          >
+            <span>🌐</span> <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('en')"
+                >🇺🇸 English</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('id')"
+                >🇮🇩 Indonesia</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('es')"
+                >🇪🇸 Español</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ar')"
+                >🇲🇦 العربية</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ur')"
+                >🇵🇰 اردو</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ms')"
+                >🇲🇾 Bahasa Malaysia</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <style>
+          .dropdown:hover .dropdown-menu {
+            display: block;
+          }
+          .dropdown-menu {
+            display: none;
+          }
+          @media (max-width: 768px) {
+            .sitename {
+              font-size: 0.9rem !important;
+            }
+          }
+          @media (max-width: 1199px) {
+            .btn-getstarted {
+              display: none !important;
+            }
+          }
+          .btn-getstarted-mobile {
+            background: var(--accent-color, #007bff);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            display: inline-block;
+          }
+        </style>
+
+        <a class="btn-getstarted" href="services.html">Get Started</a>
       </div>
-      
-      <style>
-      .dropdown:hover .dropdown-menu {
-        display: block;
-      }
-      .dropdown-menu {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        .sitename {
-          font-size: 0.9rem !important;
-        }
-      }
-      @media (max-width: 1199px) {
-        .btn-getstarted {
-          display: none !important;
-        }
-      }
-      .btn-getstarted-mobile {
-        background: var(--accent-color, #007bff);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 10px;
-        display: inline-block;
-      }
-      </style>
-
-      <a class="btn-getstarted" href="services.html">Get Started</a>
-
-    </div>
-  </header>
+    </header>
 
     <main class="main">
       <!-- Hero Section -->
@@ -128,8 +173,7 @@
                 <p class="mb-4 mb-md-5">
                   Bergabunglah dengan komunitas SCR ALL COUNTRY MOD & BOT yang
                   menyediakan berbagai layanan modifikasi aplikasi, bot, dan
-                  keamanan digital terbaik. Berdiri dari tahun 2019. <br>
-
+                  keamanan digital terbaik. Berdiri dari tahun 2019. <br />
                 </p>
 
                 <div class="hero-buttons">
@@ -148,7 +192,14 @@
                   src="assets/img/kumpul.jpeg"
                   alt="SCR Logo"
                   class="img-fluid"
-                  style="border-radius: 15px; max-width: 400px; width: 100%; height: 300px; object-fit: cover; cursor: pointer;"
+                  style="
+                    border-radius: 15px;
+                    max-width: 400px;
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"
                 />
@@ -222,26 +273,41 @@
               <p>Komunitas Global</p>
               <p>All Country Support</p>
               <p class="mt-3">
-                <strong>Telegram:</strong> <a href="https://t.me/screamo187" target="_blank" style="color: inherit; text-decoration: none;">t.me/screamo187</a>
+                <strong>Telegram:</strong>
+                <a
+                  href="https://t.me/screamo187"
+                  target="_blank"
+                  style="color: inherit; text-decoration: none"
+                  >t.me/screamo187</a
+                >
               </p>
               <p>
                 <strong>Email:</strong> <span>soniscreamo187@gmail.com</span>
               </p>
             </div>
             <div class="social-links d-flex mt-4">
-              <a href="https://t.me/shopeep2p" target="_blank" style="color: #0088cc;"
+              <a
+                href="https://t.me/shopeep2p"
+                target="_blank"
+                style="color: #0088cc"
                 ><i class="bi bi-telegram"></i
               ></a>
-              <a href="https://t.me/InDRIVERNasional" target="_blank" style="color: #dc3545;"
+              <a
+                href="https://t.me/InDRIVERNasional"
+                target="_blank"
+                style="color: #dc3545"
                 ><i class="bi bi-telegram"></i
               ></a>
-              <a href="https://t.me/scrindriverspainnational" target="_blank" style="color: #ffc107;"
+              <a
+                href="https://t.me/scrindriverspainnational"
+                target="_blank"
+                style="color: #ffc107"
                 ><i class="bi bi-telegram"></i
               ></a>
               <a
                 href="https://wa.me/6285216328735"
                 target="_blank"
-                style="color: #25d366;"
+                style="color: #25d366"
                 ><i class="bi bi-whatsapp"></i
               ></a>
             </div>
@@ -293,11 +359,22 @@
     </footer>
 
     <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body p-0">
-            <img src="assets/img/kumpul.jpeg" alt="SCR Logo" class="img-fluid w-100" style="border-radius: 8px;">
+            <img
+              src="assets/img/kumpul.jpeg"
+              alt="SCR Logo"
+              class="img-fluid w-100"
+              style="border-radius: 8px"
+            />
           </div>
         </div>
       </div>
@@ -321,107 +398,175 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-  
-  <script>
-  function changeLanguage(lang) {
-    localStorage.setItem('selectedLanguage', lang);
-    
-    const translations = {
-      en: {
-        home: 'Home', about: 'About', services: 'Services', contact: 'Contact', getStarted: 'Get Started',
-        community: 'Community', modBot: 'Modification & Bot', trusted: 'Trusted',
-        description: 'Join the SCR ALL COUNTRY MOD & BOT community that provides various application modification services, bots, and the best digital security. Established since 2019.',
-        modsAvailable: '500+ Mods Available', modifiedApps: 'Modified applications',
-        activeMembers: '1000+ Active Members', trustedCommunity: 'Trusted community',
-        support247: '24/7 Support', customerService: 'Customer service',
-        secure100: '100% Secure', guaranteedSecurity: 'Guaranteed security'
-      },
-      id: {
-        home: 'Home', about: 'About', services: 'Services', contact: 'Contact', getStarted: 'Get Started',
-        community: 'Komunitas', modBot: 'Modifikasi & Bot', trusted: 'Terpercaya',
-        description: 'Bergabunglah dengan komunitas SCR ALL COUNTRY MOD & BOT yang menyediakan berbagai layanan modifikasi aplikasi, bot, dan keamanan digital terbaik. Berdiri dari tahun 2019.',
-        modsAvailable: '500+ Mod Tersedia', modifiedApps: 'Aplikasi termodifikasi',
-        activeMembers: '1000+ Member Aktif', trustedCommunity: 'Komunitas terpercaya',
-        support247: '24/7 Support', customerService: 'Layanan pelanggan',
-        secure100: '100% Aman', guaranteedSecurity: 'Terjamin keamanan'
-      },
-      es: {
-        home: 'Inicio', about: 'Acerca de', services: 'Servicios', contact: 'Contacto', getStarted: 'Comenzar',
-        community: 'Comunidad', modBot: 'Modificación y Bot', trusted: 'Confiable',
-        description: 'Únete a la comunidad SCR ALL COUNTRY MOD & BOT que proporciona varios servicios de modificación de aplicaciones, bots y la mejor seguridad digital. Establecido desde 2019.',
-        modsAvailable: '500+ Mods Disponibles', modifiedApps: 'Aplicaciones modificadas',
-        activeMembers: '1000+ Miembros Activos', trustedCommunity: 'Comunidad confiable',
-        support247: 'Soporte 24/7', customerService: 'Servicio al cliente',
-        secure100: '100% Seguro', guaranteedSecurity: 'Seguridad garantizada'
-      },
-      ar: {
-        home: 'الرئيسية', about: 'حول', services: 'الخدمات', contact: 'اتصل', getStarted: 'ابدأ الآن',
-        community: 'المجتمع', modBot: 'التعديل والبوت', trusted: 'موثوق',
-        description: 'انضم إلى مجتمع SCR ALL COUNTRY MOD & BOT الذي يوفر خدمات تعديل التطبيقات المختلفة والبوتات وأفضل الأمان الرقمي. تأسس منذ 2019.',
-        modsAvailable: '500+ تعديل متاح', modifiedApps: 'تطبيقات معدلة',
-        activeMembers: '1000+ عضو نشط', trustedCommunity: 'مجتمع موثوق',
-        support247: 'دعم 24/7', customerService: 'خدمة العملاء',
-        secure100: '100% آمن', guaranteedSecurity: 'أمان مضمون'
-      },
-      ur: {
-        home: 'ہوم', about: 'کے بارے میں', services: 'خدمات', contact: 'رابطہ', getStarted: 'شروع کریں',
-        community: 'کمیونٹی', modBot: 'موڈیفیکیشن اور بوٹ', trusted: 'قابل اعتماد',
-        description: 'SCR ALL COUNTRY MOD & BOT کمیونٹی میں شامل ہوں جو مختلف ایپلیکیشن موڈیفیکیشن سروسز، بوٹس، اور بہترین ڈیجیٹل سیکیورٹی فراہم کرتی ہے۔ 2019 سے قائم۔',
-        modsAvailable: '500+ موڈز دستیاب', modifiedApps: 'موڈیفائی شدہ ایپلیکیشنز',
-        activeMembers: '1000+ فعال ممبرز', trustedCommunity: 'قابل اعتماد کمیونٹی',
-        support247: '24/7 سپورٹ', customerService: 'کسٹمر سروس',
-        secure100: '100% محفوظ', guaranteedSecurity: 'محفوظیت کی ضمانت'
-      },
-      ms: {
-        home: 'Utama', about: 'Tentang', services: 'Perkhidmatan', contact: 'Hubungi', getStarted: 'Mula',
-        community: 'Komuniti', modBot: 'Pengubahsuaian & Bot', trusted: 'Dipercayai',
-        description: 'Sertai komuniti SCR ALL COUNTRY MOD & BOT yang menyediakan pelbagai perkhidmatan pengubahsuaian aplikasi, bot, dan keselamatan digital terbaik. Ditubuhkan sejak 2019.',
-        modsAvailable: '500+ Mod Tersedia', modifiedApps: 'Aplikasi yang diubahsuai',
-        activeMembers: '1000+ Ahli Aktif', trustedCommunity: 'Komuniti dipercayai',
-        support247: 'Sokongan 24/7', customerService: 'Perkhidmatan pelanggan',
-        secure100: '100% Selamat', guaranteedSecurity: 'Keselamatan terjamin'
+
+    <script>
+      function changeLanguage(lang) {
+        localStorage.setItem("selectedLanguage", lang);
+
+        const translations = {
+          en: {
+            home: "Home",
+            about: "About",
+            services: "Services",
+            contact: "Contact",
+            getStarted: "Get Started",
+            community: "Community",
+            modBot: "Modification & Bot",
+            trusted: "Trusted",
+            description:
+              "Join the SCR ALL COUNTRY MOD & BOT community that provides various application modification services, bots, and the best digital security. Established since 2019.",
+            modsAvailable: "500+ Mods Available",
+            modifiedApps: "Modified applications",
+            activeMembers: "1000+ Active Members",
+            trustedCommunity: "Trusted community",
+            support247: "24/7 Support",
+            customerService: "Customer service",
+            secure100: "100% Secure",
+            guaranteedSecurity: "Guaranteed security",
+          },
+          id: {
+            home: "Home",
+            about: "About",
+            services: "Services",
+            contact: "Contact",
+            getStarted: "Get Started",
+            community: "Komunitas",
+            modBot: "Modifikasi & Bot",
+            trusted: "Terpercaya",
+            description:
+              "Bergabunglah dengan komunitas SCR ALL COUNTRY MOD & BOT yang menyediakan berbagai layanan modifikasi aplikasi, bot, dan keamanan digital terbaik. Berdiri dari tahun 2019.",
+            modsAvailable: "500+ Mod Tersedia",
+            modifiedApps: "Aplikasi termodifikasi",
+            activeMembers: "5000+ Member Aktif",
+            trustedCommunity: "Komunitas terpercaya",
+            support247: "24/7 Support",
+            customerService: "Layanan pelanggan",
+            secure100: "100% Aman",
+            guaranteedSecurity: "Terjamin keamanan",
+          },
+          es: {
+            home: "Inicio",
+            about: "Acerca de",
+            services: "Servicios",
+            contact: "Contacto",
+            getStarted: "Comenzar",
+            community: "Comunidad",
+            modBot: "Modificación y Bot",
+            trusted: "Confiable",
+            description:
+              "Únete a la comunidad SCR ALL COUNTRY MOD & BOT que proporciona varios servicios de modificación de aplicaciones, bots y la mejor seguridad digital. Establecido desde 2019.",
+            modsAvailable: "500+ Mods Disponibles",
+            modifiedApps: "Aplicaciones modificadas",
+            activeMembers: "1000+ Miembros Activos",
+            trustedCommunity: "Comunidad confiable",
+            support247: "Soporte 24/7",
+            customerService: "Servicio al cliente",
+            secure100: "100% Seguro",
+            guaranteedSecurity: "Seguridad garantizada",
+          },
+          ar: {
+            home: "الرئيسية",
+            about: "حول",
+            services: "الخدمات",
+            contact: "اتصل",
+            getStarted: "ابدأ الآن",
+            community: "المجتمع",
+            modBot: "التعديل والبوت",
+            trusted: "موثوق",
+            description:
+              "انضم إلى مجتمع SCR ALL COUNTRY MOD & BOT الذي يوفر خدمات تعديل التطبيقات المختلفة والبوتات وأفضل الأمان الرقمي. تأسس منذ 2019.",
+            modsAvailable: "500+ تعديل متاح",
+            modifiedApps: "تطبيقات معدلة",
+            activeMembers: "1000+ عضو نشط",
+            trustedCommunity: "مجتمع موثوق",
+            support247: "دعم 24/7",
+            customerService: "خدمة العملاء",
+            secure100: "100% آمن",
+            guaranteedSecurity: "أمان مضمون",
+          },
+          ur: {
+            home: "ہوم",
+            about: "کے بارے میں",
+            services: "خدمات",
+            contact: "رابطہ",
+            getStarted: "شروع کریں",
+            community: "کمیونٹی",
+            modBot: "موڈیفیکیشن اور بوٹ",
+            trusted: "قابل اعتماد",
+            description:
+              "SCR ALL COUNTRY MOD & BOT کمیونٹی میں شامل ہوں جو مختلف ایپلیکیشن موڈیفیکیشن سروسز، بوٹس، اور بہترین ڈیجیٹل سیکیورٹی فراہم کرتی ہے۔ 2019 سے قائم۔",
+            modsAvailable: "500+ موڈز دستیاب",
+            modifiedApps: "موڈیفائی شدہ ایپلیکیشنز",
+            activeMembers: "1000+ فعال ممبرز",
+            trustedCommunity: "قابل اعتماد کمیونٹی",
+            support247: "24/7 سپورٹ",
+            customerService: "کسٹمر سروس",
+            secure100: "100% محفوظ",
+            guaranteedSecurity: "محفوظیت کی ضمانت",
+          },
+          ms: {
+            home: "Utama",
+            about: "Tentang",
+            services: "Perkhidmatan",
+            contact: "Hubungi",
+            getStarted: "Mula",
+            community: "Komuniti",
+            modBot: "Pengubahsuaian & Bot",
+            trusted: "Dipercayai",
+            description:
+              "Sertai komuniti SCR ALL COUNTRY MOD & BOT yang menyediakan pelbagai perkhidmatan pengubahsuaian aplikasi, bot, dan keselamatan digital terbaik. Ditubuhkan sejak 2019.",
+            modsAvailable: "500+ Mod Tersedia",
+            modifiedApps: "Aplikasi yang diubahsuai",
+            activeMembers: "1000+ Ahli Aktif",
+            trustedCommunity: "Komuniti dipercayai",
+            support247: "Sokongan 24/7",
+            customerService: "Perkhidmatan pelanggan",
+            secure100: "100% Selamat",
+            guaranteedSecurity: "Keselamatan terjamin",
+          },
+        };
+
+        const t = translations[lang];
+        if (t) {
+          // Update navigation - skip the logo sitename
+          const navLinks = document.querySelectorAll("#navmenu a");
+          navLinks[0].textContent = t.home;
+          navLinks[1].textContent = t.about;
+          navLinks[2].textContent = t.services;
+          navLinks[3].textContent = t.contact;
+
+          document
+            .querySelectorAll(".btn-getstarted, .btn-primary")
+            .forEach((btn) => {
+              btn.textContent = t.getStarted;
+            });
+
+          const heroH1 = document.querySelector(".hero-content h1");
+          if (heroH1) {
+            heroH1.innerHTML = `${t.community} <br /> ${t.modBot} <br /> <span class="accent-text">${t.trusted}</span>`;
+          }
+
+          const heroP = document.querySelector(".hero-content p");
+          if (heroP) heroP.textContent = t.description;
+
+          const stats = document.querySelectorAll(".stat-content h4");
+          const statsDesc = document.querySelectorAll(".stat-content p");
+
+          if (stats[0]) stats[0].textContent = t.modsAvailable;
+          if (statsDesc[0]) statsDesc[0].textContent = t.modifiedApps;
+          if (stats[1]) stats[1].textContent = t.activeMembers;
+          if (statsDesc[1]) statsDesc[1].textContent = t.trustedCommunity;
+          if (stats[2]) stats[2].textContent = t.support247;
+          if (statsDesc[2]) statsDesc[2].textContent = t.customerService;
+          if (stats[3]) stats[3].textContent = t.secure100;
+          if (statsDesc[3]) statsDesc[3].textContent = t.guaranteedSecurity;
+        }
       }
-    };
-    
-    const t = translations[lang];
-    if (t) {
-      // Update navigation - skip the logo sitename
-      const navLinks = document.querySelectorAll('#navmenu a');
-      navLinks[0].textContent = t.home;
-      navLinks[1].textContent = t.about;
-      navLinks[2].textContent = t.services;
-      navLinks[3].textContent = t.contact;
-      
-      document.querySelectorAll('.btn-getstarted, .btn-primary').forEach(btn => {
-        btn.textContent = t.getStarted;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedLang = localStorage.getItem("selectedLanguage") || "id";
+        changeLanguage(savedLang);
       });
-      
-      const heroH1 = document.querySelector('.hero-content h1');
-      if (heroH1) {
-        heroH1.innerHTML = `${t.community} <br /> ${t.modBot} <br /> <span class="accent-text">${t.trusted}</span>`;
-      }
-      
-      const heroP = document.querySelector('.hero-content p');
-      if (heroP) heroP.textContent = t.description;
-      
-      const stats = document.querySelectorAll('.stat-content h4');
-      const statsDesc = document.querySelectorAll('.stat-content p');
-      
-      if (stats[0]) stats[0].textContent = t.modsAvailable;
-      if (statsDesc[0]) statsDesc[0].textContent = t.modifiedApps;
-      if (stats[1]) stats[1].textContent = t.activeMembers;
-      if (statsDesc[1]) statsDesc[1].textContent = t.trustedCommunity;
-      if (stats[2]) stats[2].textContent = t.support247;
-      if (statsDesc[2]) statsDesc[2].textContent = t.customerService;
-      if (stats[3]) stats[3].textContent = t.secure100;
-      if (statsDesc[3]) statsDesc[3].textContent = t.guaranteedSecurity;
-    }
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'id';
-    changeLanguage(savedLang);
-  });
-  </script>
+    </script>
   </body>
 </html>
