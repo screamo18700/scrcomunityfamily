@@ -1,474 +1,763 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - iLanding Bootstrap Template</title>
-  <link href="assets/img/scrlogo.jpeg" rel="icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services - iLanding Bootstrap Template</title>
+    <link href="assets/img/scrlogo.jpeg" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-<body class="services-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/scrlogo.jpeg" alt="SCR Logo" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
-        <h1 class="sitename">SCR COMUNITY FAMILY</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="d-xl-none"><a href="services.html" class="btn-getstarted-mobile">Get Started</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-      
-      <div class="dropdown" style="margin-right: 15px;">
-        <a href="#" class="dropdown-toggle" style="text-decoration: none; color: inherit;">
-          <span>🌐</span> <i class="bi bi-chevron-down"></i>
+  <body class="services-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <img
+            src="assets/img/scrlogo.jpeg"
+            alt="SCR Logo"
+            style="
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-right: 10px;
+            "
+          />
+          <h1 class="sitename">SCR COMUNITY FAMILY</h1>
         </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇺🇸 English</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">🇪🇸 Español</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">🇲🇦 العربية</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ur')">🇵🇰 اردو</a></li>
-          <li><a class="dropdown-item" href="#" onclick="changeLanguage('ms')">🇲🇾 Bahasa Malaysia</a></li>
-        </ul>
-      </div>
-      
-      <style>
-      .dropdown:hover .dropdown-menu {
-        display: block;
-      }
-      .dropdown-menu {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        .sitename {
-          font-size: 0.9rem !important;
-        }
-      }
-      @media (max-width: 1199px) {
-        .btn-getstarted {
-          display: none !important;
-        }
-      }
-      .btn-getstarted-mobile {
-        background: var(--accent-color, #007bff);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 10px;
-        display: inline-block;
-      }
-      .page-title {
-        background-image: url('assets/img/bunderanhi2.webp');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        position: relative;
-        min-height: 400px;
-      }
-      @media (min-width: 768px) {
-        .page-title {
-          background-size: cover;
-          min-height: 500px;
-        }
-      }
-      .page-title::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1;
-      }
-      .page-title .container {
-        position: relative;
-        z-index: 2;
-        color: white;
-      }
-      .page-title h1, .page-title .breadcrumbs a, .page-title .breadcrumbs .current {
-        color: white !important;
-      }
-      </style>
-      <a class="btn-getstarted" href="services.html">Get Started</a>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
-        <h1>Services</h1>
-      </div>
-    </div>
-
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Layanan Kami</h2>
-        <p>Berbagai produk dan layanan terbaik dari komunitas SCR ALL COUNTRY MOD & BOT</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-gear-wide-connected"></i>
-              </div>
-              <div>
-                <h3>REGISTER MOD</h3>
-                <p>Layanan registrasi dan aktivasi aplikasi modifikasi dengan sistem keamanan terjamin dan support 24/7.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-code-square"></i>
-              </div>
-              <div>
-                <h3>BASE MOD</h3>
-                <p>Menyediakan base modifikasi aplikasi dengan fitur lengkap dan update terbaru untuk berbagai kebutuhan.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-robot"></i>
-              </div>
-              <div>
-                <h3>BOT INDRIVER</h3>
-                <p>Bot otomatis untuk aplikasi InDriver dengan fitur canggih dan performa tinggi untuk memaksimalkan penghasilan.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-phone"></i>
-              </div>
-              <div>
-                <h3>ROOTING ANDROID</h3>
-                <p>Layanan rooting perangkat Android dengan metode aman dan terpercaya untuk akses penuh sistem.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-search"></i>
-              </div>
-              <div>
-                <h3>DOXXING</h3>
-                <p>Layanan pencarian informasi digital dengan metode profesional dan hasil akurat sesuai kebutuhan klien.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-whatsapp"></i>
-              </div>
-              <div>
-                <h3>NOKOS WA/TELE</h3>
-                <p>Layanan pembuatan nomor kosong untuk WhatsApp dan Telegram dengan berbagai negara pilihan.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-lock"></i>
-              </div>
-              <div>
-                <h3>PEMASANGAN LOCK APK</h3>
-                <p>Instalasi sistem akses penguncian aplikasi untuk melindungi orang tidak sembarang dapat mengakses apk<br><br>Lock yang di sediakan :<br>1. Lock Generator<br><br>2. Lock Server ( Coin sesuai Permintaan )</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <div>
-                <h3>PROTECT APK</h3>
-                <p>Layanan proteksi aplikasi dengan teknologi anti-reverse engineering dan sistem keamanan berlapis.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="900">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-globe"></i>
-              </div>
-              <div>
-                <h3>PEMBUATAN WEBSITE</h3>
-                <p>Layanan pembuatan website profesional dengan desain modern, responsif, dan SEO friendly untuk bisnis Anda.</p>
-                <a href="#" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 col-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">SCR MOD & BOT</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Komunitas Global</p>
-            <p>All Country Support</p>
-            <p class="mt-3"><strong>Telegram:</strong> <a href="https://t.me/screamo187" target="_blank" style="color: inherit; text-decoration: none;">t.me/screamo187</a></p>
-            <p><strong>Email:</strong> <span>soniscreamo187@gmail.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href="https://t.me/shopeep2p" target="_blank"><i class="bi bi-telegram"></i></a>
-            <a href="https://t.me/InDRIVERNasional" target="_blank"><i class="bi bi-telegram"></i></a>
-            <a href="https://t.me/scrindriverspainnational" target="_blank"><i class="bi bi-telegram"></i></a>
-            <a href="https://wa.me/6285216328735" target="_blank"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-6 footer-links">
-          <h4>Menu</h4>
+        <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="d-xl-none">
+              <a href="services.html" class="btn-getstarted-mobile"
+                >Get Started</a
+              >
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="dropdown" style="margin-right: 15px">
+          <a
+            href="#"
+            class="dropdown-toggle"
+            style="text-decoration: none; color: inherit"
+          >
+            <span>🌐</span> <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('en')"
+                >🇺🇸 English</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('id')"
+                >🇮🇩 Indonesia</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('es')"
+                >🇪🇸 Español</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ar')"
+                >🇲🇦 العربية</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ur')"
+                >🇵🇰 اردو</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('ms')"
+                >🇲🇾 Bahasa Malaysia</a
+              >
+            </li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-6 footer-links">
-          <h4>Layanan Utama</h4>
-          <ul>
-            <li><a href="#">Register MOD</a></li>
-            <li><a href="#">Base MOD</a></li>
-            <li><a href="#">Bot InDriver</a></li>
-            <li><a href="#">Rooting Android</a></li>
-            <li><a href="#">Protect APK</a></li>
-            <li><a href="#">Pembuatan Website</a></li>
-          </ul>
-        </div>
+        <style>
+          .dropdown:hover .dropdown-menu {
+            display: block;
+          }
+          .dropdown-menu {
+            display: none;
+          }
+          @media (max-width: 768px) {
+            .sitename {
+              font-size: 0.9rem !important;
+            }
+          }
+          @media (max-width: 1199px) {
+            .btn-getstarted {
+              display: none !important;
+            }
+          }
+          .btn-getstarted-mobile {
+            background: var(--accent-color, #007bff);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            display: inline-block;
+          }
+          .page-title {
+            background-image: url("assets/img/bunderanhi2.webp");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 400px;
+          }
+          @media (min-width: 768px) {
+            .page-title {
+              background-size: cover;
+              min-height: 500px;
+            }
+          }
+          .page-title::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+          }
+          .page-title .container {
+            position: relative;
+            z-index: 2;
+            color: white;
+          }
+          .page-title h1,
+          .page-title .breadcrumbs a,
+          .page-title .breadcrumbs .current {
+            color: white !important;
+          }
+        </style>
+        <a class="btn-getstarted" href="services.html">Get Started</a>
+      </div>
+    </header>
 
-        <div class="col-lg-3 col-md-3 col-6 footer-links">
-          <h4>Layanan Lainnya</h4>
-          <ul>
-            <li><a href="#">Doxxing</a></li>
-            <li><a href="#">Nokos WA/Tele</a></li>
-            <li><a href="#">Pemasangan Lock APK</a></li>
-            <li><a href="#">Support 24/7</a></li>
-          </ul>
+    <main class="main">
+      <div class="page-title" data-aos="fade">
+        <div class="container">
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Services</li>
+            </ol>
+          </nav>
+          <h1>Services</h1>
         </div>
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">SCR MOD & BOT</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Komunitas SCR ALL COUNTRY MOD & BOT
+      <!-- Services Section -->
+      <section id="services" class="services section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Layanan Kami</h2>
+          <p>
+            Berbagai produk dan layanan terbaik dari komunitas SCR ALL COUNTRY
+            MOD & BOT
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-gear-wide-connected"></i>
+                </div>
+                <div>
+                  <h3>REGISTER MOD</h3>
+                  <p>
+                    Layanan registrasi dan aktivasi aplikasi modifikasi dengan
+                    sistem keamanan terjamin dan support 24/7.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-code-square"></i>
+                </div>
+                <div>
+                  <h3>BASE MOD</h3>
+                  <p>
+                    Menyediakan base modifikasi aplikasi dengan fitur lengkap
+                    dan update terbaru untuk berbagai kebutuhan.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <div>
+                  <h3>BOT INDRIVER</h3>
+                  <p>
+                    Bot otomatis untuk aplikasi InDriver dengan fitur canggih
+                    dan performa tinggi untuk memaksimalkan penghasilan.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <div>
+                  <h3>ROOTING ANDROID</h3>
+                  <p>
+                    Layanan rooting perangkat Android dengan metode aman dan
+                    terpercaya untuk akses penuh sistem.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div>
+                  <h3>DOXXING</h3>
+                  <p>
+                    Layanan pencarian informasi digital dengan metode
+                    profesional dan hasil akurat sesuai kebutuhan klien.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <div>
+                  <h3>NOKOS WA/TELE</h3>
+                  <p>
+                    Layanan pembuatan nomor kosong untuk WhatsApp dan Telegram
+                    dengan berbagai negara pilihan.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-lock"></i>
+                </div>
+                <div>
+                  <h3>PEMASANGAN LOCK APK</h3>
+                  <p>
+                    Instalasi sistem akses penguncian aplikasi untuk melindungi
+                    orang tidak sembarang dapat mengakses apk<br /><br />Lock
+                    yang di sediakan :<br />1. Lock Generator<br /><br />2. Lock
+                    Server ( Coin sesuai Permintaan )
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div>
+                  <h3>PROTECT APK</h3>
+                  <p>
+                    Layanan proteksi aplikasi dengan teknologi anti-reverse
+                    engineering dan sistem keamanan berlapis.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="900">
+              <div class="service-card d-flex">
+                <div class="icon flex-shrink-0">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div>
+                  <h3>PEMBUATAN WEBSITE</h3>
+                  <p>
+                    Layanan pembuatan website profesional dengan desain modern,
+                    responsif, dan SEO friendly untuk bisnis Anda.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Selengkapnya <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 col-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">SCR MOD & BOT</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Komunitas Global</p>
+              <p>All Country Support</p>
+              <p class="mt-3">
+                <strong>Telegram:</strong>
+                <a
+                  href="https://t.me/screamo187"
+                  target="_blank"
+                  style="color: inherit; text-decoration: none"
+                  >t.me/screamo187</a
+                >
+              </p>
+              <p>
+                <strong>Email:</strong> <span>soniscreamo187@gmail.com</span>
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://t.me/shopeep2p" target="_blank"
+                ><i class="bi bi-telegram"></i
+              ></a>
+              <a href="https://t.me/InDRIVERNasional" target="_blank"
+                ><i class="bi bi-telegram"></i
+              ></a>
+              <a href="https://t.me/scrindriverspainnational" target="_blank"
+                ><i class="bi bi-telegram"></i
+              ></a>
+              <a href="https://wa.me/6285216328735" target="_blank"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-6 footer-links">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-6 footer-links">
+            <h4>Layanan Utama</h4>
+            <ul>
+              <li><a href="#">Register MOD</a></li>
+              <li><a href="#">Base MOD</a></li>
+              <li><a href="#">Bot InDriver</a></li>
+              <li><a href="#">Rooting Android</a></li>
+              <li><a href="#">Protect APK</a></li>
+              <li><a href="#">Pembuatan Website</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-6 footer-links">
+            <h4>Layanan Lainnya</h4>
+            <ul>
+              <li><a href="#">Doxxing</a></li>
+              <li><a href="#">Nokos WA/Tele</a></li>
+              <li><a href="#">Pemasangan Lock APK</a></li>
+              <li><a href="#">Support 24/7</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">SCR MOD & BOT</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">Komunitas SCR ALL COUNTRY MOD & BOT</div>
+      </div>
+    </footer>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  
-  <script>
-  function changeLanguage(lang) {
-    localStorage.setItem('selectedLanguage', lang);
-    
-    const translations = {
-      en: {
-        home: 'Home', about: 'About', services: 'Services', contact: 'Contact', getStarted: 'Get Started',
-        servicesTitle: 'Our Services', servicesDesc: 'Various products and services from the SCR ALL COUNTRY MOD & BOT community',
-        registerMod: 'REGISTER MOD', registerModDesc: 'Registration and activation services for modified applications with guaranteed security system and 24/7 support.',
-        baseMod: 'BASE MOD', baseModDesc: 'Providing application modification base with complete features and latest updates for various needs.',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'Automatic bot for InDriver application with advanced features and high performance to maximize earnings.',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'Android device rooting service with safe and trusted methods for full system access.',
-        doxxing: 'DOXXING', doxxingDesc: 'Digital information search service with professional methods and accurate results according to client needs.',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'Empty number creation service for WhatsApp and Telegram with various country options.',
-        lockApk: 'LOCK APK INSTALLATION', lockApkDesc: 'Installation of application access locking system to protect people from unauthorized access to apk<br><br>Available Locks:<br>1. Lock Generator<br><br>2. Lock Server (Coins as Requested)',
-        protectApk: 'PROTECT APK', protectApkDesc: 'Application protection service with anti-reverse engineering technology and layered security system.',
-        websiteCreation: 'WEBSITE CREATION', websiteCreationDesc: 'Professional website creation service with modern, responsive design and SEO friendly for your business.'
-      },
-      id: {
-        home: 'Home', about: 'About', services: 'Services', contact: 'Contact', getStarted: 'Get Started',
-        servicesTitle: 'Layanan Kami', servicesDesc: 'Berbagai produk dan layanan terbaik dari komunitas SCR ALL COUNTRY MOD & BOT',
-        registerMod: 'REGISTER MOD', registerModDesc: 'Layanan registrasi dan aktivasi aplikasi modifikasi dengan sistem keamanan terjamin dan support 24/7.',
-        baseMod: 'BASE MOD', baseModDesc: 'Menyediakan base modifikasi aplikasi dengan fitur lengkap dan update terbaru untuk berbagai kebutuhan.',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'Bot otomatis untuk aplikasi InDriver dengan fitur canggih dan performa tinggi untuk memaksimalkan penghasilan.',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'Layanan rooting perangkat Android dengan metode aman dan terpercaya untuk akses penuh sistem.',
-        doxxing: 'DOXXING', doxxingDesc: 'Layanan pencarian informasi digital dengan metode profesional dan hasil akurat sesuai kebutuhan klien.',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'Layanan pembuatan nomor kosong untuk WhatsApp dan Telegram dengan berbagai negara pilihan.',
-        lockApk: 'PEMASANGAN LOCK APK', lockApkDesc: 'Instalasi sistem akses penguncian aplikasi untuk melindungi orang tidak sembarang dapat mengakses apk<br><br>Lock yang di sediakan :<br>1. Lock Generator<br><br>2. Lock Server ( Coin sesuai Permintaan )',
-        protectApk: 'PROTECT APK', protectApkDesc: 'Layanan proteksi aplikasi dengan teknologi anti-reverse engineering dan sistem keamanan berlapis.',
-        websiteCreation: 'PEMBUATAN WEBSITE', websiteCreationDesc: 'Layanan pembuatan website profesional dengan desain modern, responsif, dan SEO friendly untuk bisnis Anda.'
-      },
-      es: {
-        home: 'Inicio', about: 'Acerca de', services: 'Servicios', contact: 'Contacto', getStarted: 'Comenzar',
-        servicesTitle: 'Nuestros Servicios', servicesDesc: 'Varios productos y servicios de la comunidad SCR ALL COUNTRY MOD & BOT',
-        registerMod: 'REGISTER MOD', registerModDesc: 'Servicios de registro y activación para aplicaciones modificadas con sistema de seguridad garantizado y soporte 24/7.',
-        baseMod: 'BASE MOD', baseModDesc: 'Proporcionando base de modificación de aplicaciones con características completas y últimas actualizaciones para varias necesidades.',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'Bot automático para aplicación InDriver con características avanzadas y alto rendimiento para maximizar ganancias.',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'Servicio de rooting de dispositivos Android con métodos seguros y confiables para acceso completo al sistema.',
-        doxxing: 'DOXXING', doxxingDesc: 'Servicio de búsqueda de información digital con métodos profesionales y resultados precisos según las necesidades del cliente.',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'Servicio de creación de números vacíos para WhatsApp y Telegram con varias opciones de país.',
-        lockApk: 'INSTALACIÓN LOCK APK', lockApkDesc: 'Instalación de sistema de bloqueo de acceso a aplicaciones para proteger que las personas no puedan acceder arbitrariamente a apk<br><br>Bloqueos disponibles:<br>1. Generador de Bloqueo<br><br>2. Servidor de Bloqueo (Monedas según solicitud)',
-        protectApk: 'PROTECT APK', protectApkDesc: 'Servicio de protección de aplicaciones con tecnología anti-ingeniería inversa y sistema de seguridad en capas.',
-        websiteCreation: 'CREACIÓN DE SITIOS WEB', websiteCreationDesc: 'Servicio profesional de creación de sitios web con diseño moderno, responsivo y SEO friendly para su negocio.'
-      },
-      ar: {
-        home: 'الرئيسية', about: 'حول', services: 'الخدمات', contact: 'اتصل', getStarted: 'ابدأ الآن',
-        servicesTitle: 'خدماتنا', servicesDesc: 'منتجات وخدمات مختلفة من مجتمع SCR ALL COUNTRY MOD & BOT',
-        registerMod: 'REGISTER MOD', registerModDesc: 'خدمات التسجيل والتفعيل للتطبيقات المعدلة مع نظام أمان مضمون ودعم 24/7.',
-        baseMod: 'BASE MOD', baseModDesc: 'توفير قاعدة تعديل التطبيقات مع ميزات كاملة وأحدث التحديثات لمختلف الاحتياجات.',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'بوت أوتوماتيكي لتطبيق InDriver مع ميزات متقدمة وأداء عالي لتعظيم الأرباح.',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'خدمة عمل روت لأجهزة الأندرويد بطرق آمنة وموثوقة للوصول الكامل للنظام.',
-        doxxing: 'DOXXING', doxxingDesc: 'خدمة البحث عن المعلومات الرقمية بطرق مهنية ونتائج دقيقة حسب احتياجات العميل.',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'خدمة إنشاء أرقام فارغة لواتساب وتيليجرام مع خيارات بلدان مختلفة.',
-        lockApk: 'تركيب LOCK APK', lockApkDesc: 'تركيب نظام قفل الوصول للتطبيقات لحماية الأشخاص من الوصول العشوائي إلى apk<br><br>الأقفال المتوفرة:<br>1. مولد القفل<br><br>2. خادم القفل (العملات حسب الطلب)',
-        protectApk: 'PROTECT APK', protectApkDesc: 'خدمة حماية التطبيقات بتقنية مضادة للهندسة العكسية ونظام أمان متعدد الطبقات.',
-        websiteCreation: 'إنشاء المواقع الإلكترونية', websiteCreationDesc: 'خدمة إنشاء مواقع إلكترونية احترافية بتصميم عصري ومتجاوب وصديق لمحركات البحث لأعمالك.'
-      },
-      ur: {
-        home: 'ہوم', about: 'کے بارے میں', services: 'خدمات', contact: 'رابطہ', getStarted: 'شروع کریں',
-        servicesTitle: 'ہماری خدمات', servicesDesc: 'SCR ALL COUNTRY MOD & BOT کمیونٹی سے مختلف پروڈکٹس اور بہترین سروسز',
-        registerMod: 'REGISTER MOD', registerModDesc: 'موڈیفائی شدہ ایپلیکیشنز کے لیے رجسٹریشن اور ایکٹیویشن سروسز محفوظ سیکیورٹی سسٹم اور 24/7 سپورٹ کے ساتھ۔',
-        baseMod: 'BASE MOD', baseModDesc: 'مختلف ضروریات کے لیے مکمل فیچرز اور تازہ ترین اپڈیٹس کے ساتھ ایپلیکیشن موڈیفیکیشن بیس فراہم کرنا۔',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'InDriver ایپلیکیشن کے لیے خودکار بوٹ جدید فیچرز اور اعلیٰ کارکردگی کے ساتھ آمدنی بڑھانے کے لیے۔',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'مکمل سسٹم رسائی کے لیے محفوظ اور قابل اعتماد طریقوں کے ساتھ Android ڈیوائس روٹنگ سروس۔',
-        doxxing: 'DOXXING', doxxingDesc: 'کلائنٹ کی ضروریات کے مطابق پیشہ ورانہ طریقوں اور ٹھیک نتائج کے ساتھ ڈیجیٹل معلومات کی تلاش کی سروس۔',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'مختلف ممالک کے اختیارات کے ساتھ WhatsApp اور Telegram کے لیے خالی نمبر بنانے کی سروس۔',
-        lockApk: 'LOCK APK انسٹالیشن', lockApkDesc: 'ایپلیکیشن رسائی لاک سسٹم کی انسٹالیشن تاکہ لوگ بے قابو apk تک رسائی نہ حاصل کر سکیں<br><br>دستیاب لاکس:<br>1. لاک جنریٹر<br><br>2. لاک سرور (سکے درخواست کے مطابق)',
-        protectApk: 'PROTECT APK', protectApkDesc: 'anti-reverse engineering ٹیکنالوجی اور لیئرڈ سیکیورٹی سسٹم کے ساتھ ایپلیکیشن پروٹیکشن سروس۔',
-        websiteCreation: 'ویب سائٹ بنانا', websiteCreationDesc: 'جدید ڈیزائن، ریسپانسو اور SEO فرینڈلی کے ساتھ پیشہ ورانہ ویب سائٹ بنانے کی سروس آپ کے بزنس کے لیے۔'
-      },
-      ms: {
-        home: 'Utama', about: 'Tentang', services: 'Perkhidmatan', contact: 'Hubungi', getStarted: 'Mula',
-        servicesTitle: 'Perkhidmatan Kami', servicesDesc: 'Pelbagai produk dan perkhidmatan terbaik dari komuniti SCR ALL COUNTRY MOD & BOT',
-        registerMod: 'REGISTER MOD', registerModDesc: 'Perkhidmatan pendaftaran dan pengaktifan untuk aplikasi yang diubahsuai dengan sistem keselamatan terjamin dan sokongan 24/7.',
-        baseMod: 'BASE MOD', baseModDesc: 'Menyediakan asas pengubahsuaian aplikasi dengan ciri lengkap dan kemas kini terkini untuk pelbagai keperluan.',
-        botIndriver: 'BOT INDRIVER', botIndriverDesc: 'Bot automatik untuk aplikasi InDriver dengan ciri canggih dan prestasi tinggi untuk memaksimumkan pendapatan.',
-        rootingAndroid: 'ROOTING ANDROID', rootingAndroidDesc: 'Perkhidmatan rooting peranti Android dengan kaedah selamat dan dipercayai untuk akses penuh sistem.',
-        doxxing: 'DOXXING', doxxingDesc: 'Perkhidmatan pencarian maklumat digital dengan kaedah profesional dan hasil tepat mengikut keperluan klien.',
-        nokosWaTele: 'NOKOS WA/TELE', nokosWaTeleDesc: 'Perkhidmatan penciptaan nombor kosong untuk WhatsApp dan Telegram dengan pelbagai pilihan negara.',
-        lockApk: 'PEMASANGAN LOCK APK', lockApkDesc: 'Pemasangan sistem kunci akses aplikasi untuk melindungi orang daripada mengakses apk secara sembarangan<br><br>Kunci yang disediakan:<br>1. Penjana Kunci<br><br>2. Pelayan Kunci (Syiling mengikut Permintaan)',
-        protectApk: 'PROTECT APK', protectApkDesc: 'Perkhidmatan perlindungan aplikasi dengan teknologi anti-reverse engineering dan sistem keselamatan berlapis.',
-        websiteCreation: 'PEMBINAAN LAMAN WEB', websiteCreationDesc: 'Perkhidmatan pembinaan laman web profesional dengan reka bentuk moden, responsif dan mesra SEO untuk perniagaan anda.'
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      function changeLanguage(lang) {
+        localStorage.setItem("selectedLanguage", lang);
+
+        const translations = {
+          en: {
+            home: "Home",
+            about: "About",
+            services: "Services",
+            contact: "Contact",
+            getStarted: "Get Started",
+            servicesTitle: "Our Services",
+            servicesDesc:
+              "Various products and services from the SCR ALL COUNTRY MOD & BOT community",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "Registration and activation services for modified applications with guaranteed security system and 24/7 support.",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "Providing application modification base with complete features and latest updates for various needs.",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "Automatic bot for InDriver application with advanced features and high performance to maximize earnings.",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "Android device rooting service with safe and trusted methods for full system access.",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "Digital information search service with professional methods and accurate results according to client needs.",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "Empty number creation service for WhatsApp and Telegram with various country options.",
+            lockApk: "LOCK APK INSTALLATION",
+            lockApkDesc:
+              "Installation of application access locking system to protect people from unauthorized access to apk<br><br>Available Locks:<br>1. Lock Generator<br><br>2. Lock Server (Coins as Requested)",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "Application protection service with anti-reverse engineering technology and layered security system.",
+            websiteCreation: "WEBSITE CREATION",
+            websiteCreationDesc:
+              "Professional website creation service with modern, responsive design and SEO friendly for your business.",
+          },
+          id: {
+            home: "Home",
+            about: "About",
+            services: "Services",
+            contact: "Contact",
+            getStarted: "Get Started",
+            servicesTitle: "Layanan Kami",
+            servicesDesc:
+              "Berbagai produk dan layanan terbaik dari komunitas SCR ALL COUNTRY MOD & BOT",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "Layanan registrasi dan aktivasi aplikasi modifikasi dengan sistem keamanan terjamin dan support 24/7.",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "Menyediakan base modifikasi aplikasi dengan fitur lengkap dan update terbaru untuk berbagai kebutuhan.",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "Bot otomatis untuk aplikasi InDriver dengan fitur canggih dan performa tinggi untuk memaksimalkan penghasilan.",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "Layanan rooting perangkat Android dengan metode aman dan terpercaya untuk akses penuh sistem.",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "Layanan pencarian informasi digital dengan metode profesional dan hasil akurat sesuai kebutuhan klien.",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "Layanan pembuatan nomor kosong untuk WhatsApp dan Telegram dengan berbagai negara pilihan.",
+            lockApk: "PEMASANGAN LOCK APK",
+            lockApkDesc:
+              "Instalasi sistem akses penguncian aplikasi untuk melindungi orang tidak sembarang dapat mengakses apk<br><br>Lock yang di sediakan :<br>1. Lock Generator<br><br>2. Lock Server ( Coin sesuai Permintaan )",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "Layanan proteksi aplikasi dengan teknologi anti-reverse engineering dan sistem keamanan berlapis.",
+            websiteCreation: "PEMBUATAN WEBSITE",
+            websiteCreationDesc:
+              "Layanan pembuatan website profesional dengan desain modern, responsif, dan SEO friendly untuk bisnis Anda.",
+          },
+          es: {
+            home: "Inicio",
+            about: "Acerca de",
+            services: "Servicios",
+            contact: "Contacto",
+            getStarted: "Comenzar",
+            servicesTitle: "Nuestros Servicios",
+            servicesDesc:
+              "Varios productos y servicios de la comunidad SCR ALL COUNTRY MOD & BOT",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "Servicios de registro y activación para aplicaciones modificadas con sistema de seguridad garantizado y soporte 24/7.",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "Proporcionando base de modificación de aplicaciones con características completas y últimas actualizaciones para varias necesidades.",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "Bot automático para aplicación InDriver con características avanzadas y alto rendimiento para maximizar ganancias.",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "Servicio de rooting de dispositivos Android con métodos seguros y confiables para acceso completo al sistema.",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "Servicio de búsqueda de información digital con métodos profesionales y resultados precisos según las necesidades del cliente.",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "Servicio de creación de números vacíos para WhatsApp y Telegram con varias opciones de país.",
+            lockApk: "INSTALACIÓN LOCK APK",
+            lockApkDesc:
+              "Instalación de sistema de bloqueo de acceso a aplicaciones para proteger que las personas no puedan acceder arbitrariamente a apk<br><br>Bloqueos disponibles:<br>1. Generador de Bloqueo<br><br>2. Servidor de Bloqueo (Monedas según solicitud)",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "Servicio de protección de aplicaciones con tecnología anti-ingeniería inversa y sistema de seguridad en capas.",
+            websiteCreation: "CREACIÓN DE SITIOS WEB",
+            websiteCreationDesc:
+              "Servicio profesional de creación de sitios web con diseño moderno, responsivo y SEO friendly para su negocio.",
+          },
+          ar: {
+            home: "الرئيسية",
+            about: "حول",
+            services: "الخدمات",
+            contact: "اتصل",
+            getStarted: "ابدأ الآن",
+            servicesTitle: "خدماتنا",
+            servicesDesc:
+              "منتجات وخدمات مختلفة من مجتمع SCR ALL COUNTRY MOD & BOT",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "خدمات التسجيل والتفعيل للتطبيقات المعدلة مع نظام أمان مضمون ودعم 24/7.",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "توفير قاعدة تعديل التطبيقات مع ميزات كاملة وأحدث التحديثات لمختلف الاحتياجات.",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "بوت أوتوماتيكي لتطبيق InDriver مع ميزات متقدمة وأداء عالي لتعظيم الأرباح.",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "خدمة عمل روت لأجهزة الأندرويد بطرق آمنة وموثوقة للوصول الكامل للنظام.",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "خدمة البحث عن المعلومات الرقمية بطرق مهنية ونتائج دقيقة حسب احتياجات العميل.",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "خدمة إنشاء أرقام فارغة لواتساب وتيليجرام مع خيارات بلدان مختلفة.",
+            lockApk: "تركيب LOCK APK",
+            lockApkDesc:
+              "تركيب نظام قفل الوصول للتطبيقات لحماية الأشخاص من الوصول العشوائي إلى apk<br><br>الأقفال المتوفرة:<br>1. مولد القفل<br><br>2. خادم القفل (العملات حسب الطلب)",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "خدمة حماية التطبيقات بتقنية مضادة للهندسة العكسية ونظام أمان متعدد الطبقات.",
+            websiteCreation: "إنشاء المواقع الإلكترونية",
+            websiteCreationDesc:
+              "خدمة إنشاء مواقع إلكترونية احترافية بتصميم عصري ومتجاوب وصديق لمحركات البحث لأعمالك.",
+          },
+          ur: {
+            home: "ہوم",
+            about: "کے بارے میں",
+            services: "خدمات",
+            contact: "رابطہ",
+            getStarted: "شروع کریں",
+            servicesTitle: "ہماری خدمات",
+            servicesDesc:
+              "SCR ALL COUNTRY MOD & BOT کمیونٹی سے مختلف پروڈکٹس اور بہترین سروسز",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "موڈیفائی شدہ ایپلیکیشنز کے لیے رجسٹریشن اور ایکٹیویشن سروسز محفوظ سیکیورٹی سسٹم اور 24/7 سپورٹ کے ساتھ۔",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "مختلف ضروریات کے لیے مکمل فیچرز اور تازہ ترین اپڈیٹس کے ساتھ ایپلیکیشن موڈیفیکیشن بیس فراہم کرنا۔",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "InDriver ایپلیکیشن کے لیے خودکار بوٹ جدید فیچرز اور اعلیٰ کارکردگی کے ساتھ آمدنی بڑھانے کے لیے۔",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "مکمل سسٹم رسائی کے لیے محفوظ اور قابل اعتماد طریقوں کے ساتھ Android ڈیوائس روٹنگ سروس۔",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "کلائنٹ کی ضروریات کے مطابق پیشہ ورانہ طریقوں اور ٹھیک نتائج کے ساتھ ڈیجیٹل معلومات کی تلاش کی سروس۔",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "مختلف ممالک کے اختیارات کے ساتھ WhatsApp اور Telegram کے لیے خالی نمبر بنانے کی سروس۔",
+            lockApk: "LOCK APK انسٹالیشن",
+            lockApkDesc:
+              "ایپلیکیشن رسائی لاک سسٹم کی انسٹالیشن تاکہ لوگ بے قابو apk تک رسائی نہ حاصل کر سکیں<br><br>دستیاب لاکس:<br>1. لاک جنریٹر<br><br>2. لاک سرور (سکے درخواست کے مطابق)",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "anti-reverse engineering ٹیکنالوجی اور لیئرڈ سیکیورٹی سسٹم کے ساتھ ایپلیکیشن پروٹیکشن سروس۔",
+            websiteCreation: "ویب سائٹ بنانا",
+            websiteCreationDesc:
+              "جدید ڈیزائن، ریسپانسو اور SEO فرینڈلی کے ساتھ پیشہ ورانہ ویب سائٹ بنانے کی سروس آپ کے بزنس کے لیے۔",
+          },
+          ms: {
+            home: "Utama",
+            about: "Tentang",
+            services: "Perkhidmatan",
+            contact: "Hubungi",
+            getStarted: "Mula",
+            servicesTitle: "Perkhidmatan Kami",
+            servicesDesc:
+              "Pelbagai produk dan perkhidmatan terbaik dari komuniti SCR ALL COUNTRY MOD & BOT",
+            registerMod: "REGISTER MOD",
+            registerModDesc:
+              "Perkhidmatan pendaftaran dan pengaktifan untuk aplikasi yang diubahsuai dengan sistem keselamatan terjamin dan sokongan 24/7.",
+            baseMod: "BASE MOD",
+            baseModDesc:
+              "Menyediakan asas pengubahsuaian aplikasi dengan ciri lengkap dan kemas kini terkini untuk pelbagai keperluan.",
+            botIndriver: "BOT INDRIVER",
+            botIndriverDesc:
+              "Bot automatik untuk aplikasi InDriver dengan ciri canggih dan prestasi tinggi untuk memaksimumkan pendapatan.",
+            rootingAndroid: "ROOTING ANDROID",
+            rootingAndroidDesc:
+              "Perkhidmatan rooting peranti Android dengan kaedah selamat dan dipercayai untuk akses penuh sistem.",
+            doxxing: "DOXXING",
+            doxxingDesc:
+              "Perkhidmatan pencarian maklumat digital dengan kaedah profesional dan hasil tepat mengikut keperluan klien.",
+            nokosWaTele: "NOKOS WA/TELE",
+            nokosWaTeleDesc:
+              "Perkhidmatan penciptaan nombor kosong untuk WhatsApp dan Telegram dengan pelbagai pilihan negara.",
+            lockApk: "PEMASANGAN LOCK APK",
+            lockApkDesc:
+              "Pemasangan sistem kunci akses aplikasi untuk melindungi orang daripada mengakses apk secara sembarangan<br><br>Kunci yang disediakan:<br>1. Penjana Kunci<br><br>2. Pelayan Kunci (Syiling mengikut Permintaan)",
+            protectApk: "PROTECT APK",
+            protectApkDesc:
+              "Perkhidmatan perlindungan aplikasi dengan teknologi anti-reverse engineering dan sistem keselamatan berlapis.",
+            websiteCreation: "PEMBINAAN LAMAN WEB",
+            websiteCreationDesc:
+              "Perkhidmatan pembinaan laman web profesional dengan reka bentuk moden, responsif dan mesra SEO untuk perniagaan anda.",
+          },
+        };
+
+        const t = translations[lang];
+        if (t) {
+          const navLinks = document.querySelectorAll("#navmenu a");
+          if (navLinks[0]) navLinks[0].textContent = t.home;
+          if (navLinks[1]) navLinks[1].textContent = t.about;
+          if (navLinks[2]) navLinks[2].textContent = t.services;
+          if (navLinks[3]) navLinks[3].textContent = t.contact;
+
+          document
+            .querySelectorAll(".btn-getstarted, .btn-getstarted-mobile")
+            .forEach((btn) => {
+              btn.textContent = t.getStarted;
+            });
+
+          // Services page specific translations
+          const sectionTitle = document.querySelector(".section-title h2");
+          if (sectionTitle) sectionTitle.textContent = t.servicesTitle;
+
+          const sectionDesc = document.querySelector(".section-title p");
+          if (sectionDesc) sectionDesc.textContent = t.servicesDesc;
+
+          const serviceCards = document.querySelectorAll(".service-card h3");
+          if (serviceCards[0]) serviceCards[0].textContent = t.registerMod;
+          if (serviceCards[1]) serviceCards[1].textContent = t.baseMod;
+          if (serviceCards[2]) serviceCards[2].textContent = t.botIndriver;
+          if (serviceCards[3]) serviceCards[3].textContent = t.rootingAndroid;
+          if (serviceCards[4]) serviceCards[4].textContent = t.doxxing;
+          if (serviceCards[5]) serviceCards[5].textContent = t.nokosWaTele;
+          if (serviceCards[6]) serviceCards[6].textContent = t.lockApk;
+          if (serviceCards[7]) serviceCards[7].textContent = t.protectApk;
+          if (serviceCards[8]) serviceCards[8].textContent = t.websiteCreation;
+
+          const serviceDescs = document.querySelectorAll(".service-card p");
+          if (serviceDescs[0]) serviceDescs[0].textContent = t.registerModDesc;
+          if (serviceDescs[1]) serviceDescs[1].textContent = t.baseModDesc;
+          if (serviceDescs[2]) serviceDescs[2].textContent = t.botIndriverDesc;
+          if (serviceDescs[3])
+            serviceDescs[3].textContent = t.rootingAndroidDesc;
+          if (serviceDescs[4]) serviceDescs[4].textContent = t.doxxingDesc;
+          if (serviceDescs[5]) serviceDescs[5].textContent = t.nokosWaTeleDesc;
+          if (serviceDescs[6]) serviceDescs[6].innerHTML = t.lockApkDesc;
+          if (serviceDescs[7]) serviceDescs[7].textContent = t.protectApkDesc;
+          if (serviceDescs[8])
+            serviceDescs[8].textContent = t.websiteCreationDesc;
+        }
       }
-    };
-    
-    const t = translations[lang];
-    if (t) {
-      const navLinks = document.querySelectorAll('#navmenu a');
-      if (navLinks[0]) navLinks[0].textContent = t.home;
-      if (navLinks[1]) navLinks[1].textContent = t.about;
-      if (navLinks[2]) navLinks[2].textContent = t.services;
-      if (navLinks[3]) navLinks[3].textContent = t.contact;
-      
-      document.querySelectorAll('.btn-getstarted, .btn-getstarted-mobile').forEach(btn => {
-        btn.textContent = t.getStarted;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedLang = localStorage.getItem("selectedLanguage") || "id";
+        changeLanguage(savedLang);
       });
-      
-      // Services page specific translations
-      const sectionTitle = document.querySelector('.section-title h2');
-      if (sectionTitle) sectionTitle.textContent = t.servicesTitle;
-      
-      const sectionDesc = document.querySelector('.section-title p');
-      if (sectionDesc) sectionDesc.textContent = t.servicesDesc;
-      
-      const serviceCards = document.querySelectorAll('.service-card h3');
-      if (serviceCards[0]) serviceCards[0].textContent = t.registerMod;
-      if (serviceCards[1]) serviceCards[1].textContent = t.baseMod;
-      if (serviceCards[2]) serviceCards[2].textContent = t.botIndriver;
-      if (serviceCards[3]) serviceCards[3].textContent = t.rootingAndroid;
-      if (serviceCards[4]) serviceCards[4].textContent = t.doxxing;
-      if (serviceCards[5]) serviceCards[5].textContent = t.nokosWaTele;
-      if (serviceCards[6]) serviceCards[6].textContent = t.lockApk;
-      if (serviceCards[7]) serviceCards[7].textContent = t.protectApk;
-      if (serviceCards[8]) serviceCards[8].textContent = t.websiteCreation;
-      
-      const serviceDescs = document.querySelectorAll('.service-card p');
-      if (serviceDescs[0]) serviceDescs[0].textContent = t.registerModDesc;
-      if (serviceDescs[1]) serviceDescs[1].textContent = t.baseModDesc;
-      if (serviceDescs[2]) serviceDescs[2].textContent = t.botIndriverDesc;
-      if (serviceDescs[3]) serviceDescs[3].textContent = t.rootingAndroidDesc;
-      if (serviceDescs[4]) serviceDescs[4].textContent = t.doxxingDesc;
-      if (serviceDescs[5]) serviceDescs[5].textContent = t.nokosWaTeleDesc;
-      if (serviceDescs[6]) serviceDescs[6].innerHTML = t.lockApkDesc;
-      if (serviceDescs[7]) serviceDescs[7].textContent = t.protectApkDesc;
-      if (serviceDescs[8]) serviceDescs[8].textContent = t.websiteCreationDesc;
-    }
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'id';
-    changeLanguage(savedLang);
-  });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
