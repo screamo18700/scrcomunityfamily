@@ -2328,3 +2328,117 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Neon / Dark Mode
+# Adds a neon-styled dark theme that uses CSS variables already
+# declared in :root. Toggling the `neon-dark` class on <body>
+# will switch the site to this neon theme.
+--------------------------------------------------------------*/
+.neon-dark {
+  --background-color: #05060a; /* very dark */
+  --default-color: #d8f7ff; /* soft cyan text */
+  --heading-color: #ffffff;
+  --accent-color: #00f0ff; /* neon cyan */
+  --accent-color-2: #ff2dc9; /* neon magenta for complementary glow */
+  --surface-color: #071021; /* card surfaces */
+  --contrast-color: #0b1220;
+  --nav-color: #d8f7ff;
+  --nav-hover-color: var(--accent-color);
+  --nav-mobile-background-color: #071021;
+  --nav-dropdown-background-color: #071021;
+  --nav-dropdown-color: #d8f7ff;
+}
+
+/* Neon glow touches */
+.neon-dark body,
+.neon-dark .main,
+.neon-dark section,
+.neon-dark .footer {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+.neon-dark h1,
+.neon-dark h2,
+.neon-dark h3,
+.neon-dark h4,
+.neon-dark h5,
+.neon-dark h6 {
+  color: var(--heading-color);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--accent-color), transparent 50%);
+}
+
+.neon-dark a {
+  color: var(--accent-color);
+  text-decoration: none;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.neon-dark .header .header-container {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 20px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.neon-dark .btn-getstarted,
+.neon-dark .btn-primary,
+.neon-dark .btn-cta,
+.neon-dark .btn {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
+  color: #0b1220;
+  box-shadow: 0 6px 28px color-mix(in srgb, var(--accent-color), transparent 60%), 0 0 40px color-mix(in srgb, var(--accent-color-2), transparent 80%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+}
+
+.neon-dark .service-card,
+.neon-dark .pricing-card,
+.neon-dark .testimonial-item,
+.neon-dark .contact .contact-form,
+.neon-dark .hero .stats-row {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), black 5%), var(--surface-color));
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 30px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background: transparent;
+  color: var(--nav-color);
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle i { font-size: 18px; }
+
+.theme-toggle:hover { transform: scale(1.06); }
+
+.neon-dark .theme-toggle {
+  border: none;
+  color: var(--contrast-color);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 65%), color-mix(in srgb, var(--accent-color-2), transparent 65%));
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--accent-color), transparent 60%), 0 0 20px color-mix(in srgb, var(--accent-color-2), transparent 70%);
+}
+
+/* Make some icons and special elements glow in neon mode */
+.neon-dark .stat-icon i,
+.neon-dark .company-badge,
+.neon-dark .hero .hero-content .accent-text {
+  text-shadow: 0 0 12px color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Slightly reduce heavy shadows on mobile for readability */
+@media (max-width: 768px) {
+  .neon-dark .header .header-container {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  }
+  .neon-dark .btn-getstarted,
+  .neon-dark .btn-primary { box-shadow: none; }
+}

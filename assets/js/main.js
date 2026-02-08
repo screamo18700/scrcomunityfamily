@@ -175,3 +175,64 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+/* ------------------------------------------------------------------
+   Neon Dark Mode Toggle
+   - Injects a theme toggle button into the header container
+   - Persists selection in localStorage under key 'site-theme'
+   - Applies `.neon-dark` on <body> when enabled
+-------------------------------------------------------------------*/
+(function() {
+  const THEME_KEY = 'site-theme'; // 'neon' or 'light'
+
+  function applyTheme(theme) {
+    const isNeon = theme === 'neon';
+    if (isNeon) document.body.classList.add('neon-dark');
+    else document.body.classList.remove('neon-dark');
+
+    const btn = document.querySelector('.theme-toggle');
+    if (btn) {
+      btn.setAttribute('aria-pressed', isNeon);
+      btn.innerHTML = isNeon ? '<i class="bi bi-sun-fill" aria-hidden="true"></i>' : '<i class="bi bi-moon-stars" aria-hidden="true"></i>';
+      btn.title = isNeon ? 'Disable Neon Dark Mode' : 'Enable Neon Dark Mode';
+    }
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem(THEME_KEY) || 'light';
+    const next = current === 'neon' ? 'light' : 'neon';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  }
+
+  // Create and insert the theme toggle button into the header container
+  function createToggle() {
+    const headerContainer = document.querySelector('.header .header-container');
+    if (!headerContainer) return;
+
+    // Avoid duplicate button
+    if (headerContainer.querySelector('.theme-toggle')) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    btn.setAttribute('aria-pressed', 'false');
+    btn.title = 'Enable Neon Dark Mode';
+    btn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i>';
+    btn.addEventListener('click', toggleTheme);
+
+    // Insert before the get started button or at the end of header container
+    const preferBefore = headerContainer.querySelector('.btn-getstarted') || headerContainer.querySelector('.dropdown');
+    if (preferBefore) headerContainer.insertBefore(btn, preferBefore);
+    else headerContainer.appendChild(btn);
+  }
+
+  // Apply saved or system preference on load, then create the toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const saved = localStorage.getItem(THEME_KEY);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = saved || (prefersDark ? 'neon' : 'light');
+    applyTheme(initial);
+    createToggle();
+  });
+})();
