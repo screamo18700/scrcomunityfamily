@@ -770,6 +770,23 @@ section,
     font-size: 2.5rem;
   }
 
+/* Ensure Get Started in navbar remains readable in neon-dark */
+.neon-dark .header .btn-getstarted,
+.neon-dark .btn-getstarted {
+  color: var(--heading-color) !important; /* bright text */
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2)) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%) !important;
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--accent-color), transparent 60%), 0 0 30px color-mix(in srgb, var(--accent-color-2), transparent 70%) !important;
+}
+
+/* Mobile get-started variant (in header inline area) */
+.neon-dark .btn-getstarted-mobile {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2)) !important;
+  color: var(--heading-color) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 60%) !important;
+}
+
   .hero .hero-content .hero-buttons {
     justify-content: center;
   }
@@ -2495,9 +2512,15 @@ section,
 # Improve contrast and glow specifically for services and contact
 --------------------------------------------------------------*/
 .neon-dark .services .service-card {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), black 8%), var(--surface-color));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-color), black 8%),
+    var(--surface-color)
+  );
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .neon-dark .services .service-card p {
@@ -2505,26 +2528,41 @@ section,
 }
 
 .neon-dark .services .service-card .icon {
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-color-2)
+  );
   color: var(--contrast-color);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 60%), 0 0 24px color-mix(in srgb, var(--accent-color-2), transparent 70%);
+  box-shadow:
+    0 8px 30px color-mix(in srgb, var(--accent-color), transparent 60%),
+    0 0 24px color-mix(in srgb, var(--accent-color-2), transparent 70%);
 }
 
 .neon-dark .services .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 50px rgba(0,0,0,0.6), 0 0 50px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow:
+    0 12px 50px rgba(0, 0, 0, 0.6),
+    0 0 50px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .neon-dark .services .service-card .read-more {
   color: color-mix(in srgb, var(--accent-color-2), transparent 10%);
-  text-shadow: 0 0 6px color-mix(in srgb, var(--accent-color-2), transparent 60%);
+  text-shadow: 0 0 6px
+    color-mix(in srgb, var(--accent-color-2), transparent 60%);
 }
 
 /* Contact box improvements for neon mode */
 .neon-dark .contact .info-box {
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-color-2)
+  );
   color: var(--contrast-color);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 36px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    0 0 36px color-mix(in srgb, var(--accent-color), transparent 60%);
   border: 1px solid color-mix(in srgb, var(--accent-color-2), transparent 75%);
 }
 
@@ -2534,9 +2572,15 @@ section,
 }
 
 .neon-dark .contact .contact-form {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-color), black 6%), var(--surface-color));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-color), black 6%),
+    var(--surface-color)
+  );
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.7), 0 0 30px color-mix(in srgb, var(--accent-color), transparent 75%);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.7),
+    0 0 30px color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
 .neon-dark .contact .contact-form .form-control,
@@ -2552,9 +2596,15 @@ section,
 }
 
 .neon-dark .contact .contact-form .btn {
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-color-2)
+  );
   color: var(--contrast-color);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 60%), 0 0 24px color-mix(in srgb, var(--accent-color-2), transparent 70%);
+  box-shadow:
+    0 8px 28px color-mix(in srgb, var(--accent-color), transparent 60%),
+    0 0 24px color-mix(in srgb, var(--accent-color-2), transparent 70%);
 }
 
 /* Ensure nav dropdown readable on neon */
