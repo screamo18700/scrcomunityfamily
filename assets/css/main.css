@@ -2562,3 +2562,27 @@ section,
 .neon-dark .navmenu ul {
   background-color: color-mix(in srgb, var(--surface-color), black 5%);
 }
+
+/* Make elements explicitly marked as light-background adopt dark vars in neon mode */
+.neon-dark .light-background {
+  --background-color: #05060a !important;
+  --surface-color: #071021 !important;
+  --default-color: #d8f7ff !important;
+  --heading-color: #ffffff !important;
+  --contrast-color: #0b1220 !important;
+}
+
+/* Darken the page-title overlay on neon mode so background images don't appear too bright */
+.neon-dark .page-title::before {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.neon-dark .page-title .container {
+  color: var(--default-color) !important;
+}
+
+/* Ensure the main background for sections is dark when neon-dark is active */
+.neon-dark section,
+.neon-dark .section {
+  background-color: var(--background-color) !important;
+}
