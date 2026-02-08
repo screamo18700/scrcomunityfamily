@@ -2447,6 +2447,29 @@ section,
   }
 }
 
+/* Remove background color from navigation items and dropdowns in neon-dark */
+.neon-dark .navmenu a,
+.neon-dark .navmenu a:focus,
+.neon-dark .navmenu a:hover {
+  background: transparent !important;
+  color: var(--default-color) !important;
+  box-shadow: none !important;
+}
+
+.neon-dark .navmenu ul,
+.neon-dark .navmenu .dropdown ul,
+.neon-dark .mobile-nav-active .navmenu {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* For mobile dropdown items keep padding but make background transparent */
+.neon-dark .navmenu a i,
+.neon-dark .navmenu .dropdown ul a {
+  background: transparent !important;
+  color: var(--nav-dropdown-color) !important;
+}
+
 .neon-dark .btn-getstarted,
 .neon-dark .btn-primary,
 .neon-dark .btn-cta,
