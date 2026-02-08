@@ -2432,6 +2432,21 @@ section,
     0 0 20px color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
+/* Desktop: make header container transparent in neon-dark (no background) */
+@media (min-width: 1200px) {
+  .neon-dark .header .header-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  /* keep header text/icon glows but avoid inner container background */
+  .neon-dark .header .logo h1,
+  .neon-dark .header .logo img,
+  .neon-dark .navmenu a {
+    color: var(--default-color);
+  }
+}
+
 .neon-dark .btn-getstarted,
 .neon-dark .btn-primary,
 .neon-dark .btn-cta,
